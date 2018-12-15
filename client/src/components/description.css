@@ -1,0 +1,8 @@
+.description {
+    border-right: 2px solid white;
+    height: 100vh;
+    overflow-y: scroll;
+}
+.description-text {
+    color: #e0d0d0;
+}

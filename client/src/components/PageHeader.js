@@ -3,8 +3,10 @@ import './pageheader.css'
 export default class PageHeader extends Component {
   render() {
     return (
-      <div>
-        
+      <div className="page-header col-12">
+        <div>
+            <h4>Star Wars Visualizer</h4>
+        </div>
       </div>
     )
   }
