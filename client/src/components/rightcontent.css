@@ -1,0 +1,5 @@
+.right-content {
+    height: 100vh;
+    text-align: center;
+    overflow-y: scroll;
+}
