@@ -1,5 +1,4 @@
 .card-container {
-    height: 200px;
     background-color: #1A1F26;
     margin-left: 25%;
     margin-top: 3%;
@@ -21,4 +20,7 @@
     height: 150px;
     overflow-y: scroll;
     padding: 5px;
+}
+.default-card-height{ 
+    height: 200px;
 }
