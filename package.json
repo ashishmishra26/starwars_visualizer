@@ -1,0 +1,22 @@
+{
+  "name": "starwars_visualizer",
+  "version": "1.0.0",
+  "description": "A simple tool to visualize data related to starwars series",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashishmishra26/starwars_visualizer.git"
+  },
+  "keywords": [
+    "starwars"
+  ],
+  "author": "Ashish Mishra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ashishmishra26/starwars_visualizer/issues"
+  },
+  "homepage": "https://github.com/ashishmishra26/starwars_visualizer#readme"
+}
