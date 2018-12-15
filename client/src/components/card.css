@@ -6,8 +6,19 @@
     margin-bottom: 3%;
     border-radius: 5px;
     color: #be8484;
+    user-select: none;
 }
 .card-header {
     border-bottom: 1px solid black;
     color: #be8484;
+    height: 50px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+.card-text {
+    border-bottom: 1px solid black;
+    color: #b1aaaa;
+    height: 150px;
+    overflow-y: scroll;
+    padding: 5px;
 }

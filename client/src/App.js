@@ -8,7 +8,7 @@ class App extends Component {
   constructor (props) {
     super(props);
     this.state = {
-      films: []
+      films: {}
     }
   }
   render() {
@@ -16,7 +16,7 @@ class App extends Component {
       <div className="App container-fluid">
         <div className="row">
             <PageHeader />
-            <Content />
+            <Content films={this.state.films}/>
         </div>  
       </div>
     );
@@ -30,6 +30,7 @@ class App extends Component {
     axios.get('https://swapi.co/api/films')
     .then(response => {
       this.setState({films: response.data});
+      console.log(response);
     })
     .catch(error => {
       console.log('Error fetching data', error);
