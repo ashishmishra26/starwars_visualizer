@@ -4,4 +4,14 @@
     margin-bottom: 3%;
     color: #be8484;
     user-select: none;
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+.movie-card-container-inner {
+    background-color: #1A1F26;
+    display: inline-block;
+    margin: 3%;
+    color: #be8484;
+    user-select: none;
+    border: 1px solid black;
 }
