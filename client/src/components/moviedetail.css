@@ -1,0 +1,7 @@
+.movie-card-container {
+    background-color: #1A1F26;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    color: #be8484;
+    user-select: none;
+}

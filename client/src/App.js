@@ -30,7 +30,6 @@ class App extends Component {
     axios.get('https://swapi.co/api/films')
     .then(response => {
       this.setState({films: response.data});
-      console.log(response);
     })
     .catch(error => {
       console.log('Error fetching data', error);
