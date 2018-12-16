@@ -16,7 +16,7 @@ class App extends Component {
     return (
       <div className="App container-fluid">
         <div className="row">
-            <PageHeader />
+            {/* <PageHeader /> */}
             <Content films={this.state.films}/>
         </div>  
       </div>
