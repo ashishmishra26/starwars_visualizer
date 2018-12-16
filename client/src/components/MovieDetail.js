@@ -22,17 +22,22 @@ export default class MovieDetail extends Component {
   }
   generateContent (data) {
     return data.map((value, index) => {
-      let atomicData = data[index]; 
-      return <Card key={index} index={index} height={'200px'} width={'300px'} extraClass={'movie-card-container-inner'} title={atomicData.name}/>
-    });
-  }
-  fetchData (value) {
-    return axios.get(value)
-    .then(response => {
-      return response.data;
-    })
-    .catch(error => {
-      console.log('Error fetching data', error);
+      let atomicData = data[index], 
+      desc = {},
+      table = [],
+      innerDesc;
+      for (let key in atomicData) {
+        if (!(atomicData[key] instanceof Array) && (['homeworld', 'created', 'edited', 'url'].indexOf(key) === -1)) {
+          desc[key] = atomicData[key];
+        }
+      }
+      for (let key in desc) {
+        table.push(
+        <tr key={key}><td key={key}>{key.toUpperCase()}</td><td>{desc[key]}</td></tr>
+        )
+      }
+      innerDesc = <table className="data-table"><tbody>{table}</tbody></table>;
+      return <Card key={index} index={index} height={'200px'} width={'300px'} extraClass={'movie-card-container-inner'} title={atomicData.name} desc={innerDesc}/>
     });
   }
 }
