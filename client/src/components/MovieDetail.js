@@ -22,10 +22,7 @@ export default class MovieDetail extends Component {
   }
   generateContent (data) {
     return data.map((value, index) => {
-      let atomicPromiseData = this.fetchData(value), atomicData = {};
-      atomicPromiseData.then(function(result){
-        atomicData = result;
-      })
+      let atomicData = data[index]; 
       return <Card key={index} index={index} height={'200px'} width={'300px'} extraClass={'movie-card-container-inner'} title={atomicData.name}/>
     });
   }
