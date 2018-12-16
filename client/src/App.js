@@ -30,19 +30,15 @@ class App extends Component {
   fetchData () {
     axios.get('https://swapi.co/api/films')
     .then(response => {
-      // this.setState({films: response.data});
       let films = response.data.results,
       updatedFilms = films;
-      console.log(films);
       films.forEach(function(film, indexOfFilm) {
         for (let key in film) {
           if (film[key] instanceof Array) {
             let arrayProperty = film[key];
             arrayProperty.forEach(function(valueOfProp, indexOfProp){
-              console.log(valueOfProp);
               axios.get(valueOfProp).then(function(result){
                 updatedFilms[indexOfFilm][key][indexOfProp] = result.data;
-                // console.log(updatedFilms[indexOfFilm][key][indexOfProp]);
               });
             });
           }

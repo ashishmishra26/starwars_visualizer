@@ -10,5 +10,4 @@ function fetchdata(url) {
             return null;
         });
 }
-
 export default fetchdata;

@@ -6,6 +6,12 @@
     user-select: none;
     overflow-x: scroll;
     white-space: nowrap;
+    overflow-y: hidden;
+    /* border: 2px solid #038157; */
+    border-radius: 10px;
+    -webkit-box-shadow: 3px 3px 12px -2px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 3px 3px 12px -2px rgba(0, 0, 0, 0.75);
+    box-shadow: 3px 3px 12px -2px rgba(0, 0, 0, 0.75);
 }
 
 .movie-card-container-inner {
@@ -14,7 +20,8 @@
     margin: 3%;
     color: #be8484;
     user-select: none;
-    border: 1px solid black;
+    border: 2px solid black;
+    border-radius: 5px;
 }
 
 .data-table {
@@ -26,5 +33,4 @@
 .data-table td,
 .data-table th {
     border: 1px solid rgb(78, 71, 71);
-    padding: 8px;
 }

@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import Card from './Card';
 import './moviedetail.css'
-import axios from 'axios';
 
 export default class MovieDetail extends Component {
   render() {
@@ -15,7 +14,7 @@ export default class MovieDetail extends Component {
       <div className="movie-detail col-10 ml-auto">
         {(arrProperties.map((prop, index) => {
         var desc = this.generateContent(movieData[prop]);
-        return <Card key={index} index={index} height={'300px'} desc={desc} extraClass={'movie-card-container col-12 ml--10'} title={prop}>
+        return <Card key={index} index={index} height={'300px'} desc={desc} extraClass={'movie-card-container col-12 ml--10'} title={prop} disableClick={true}>
         </Card>}))}
       </div>
     )
@@ -37,7 +36,7 @@ export default class MovieDetail extends Component {
         )
       }
       innerDesc = <table className="data-table"><tbody>{table}</tbody></table>;
-      return <Card key={index} index={index} height={'200px'} width={'300px'} extraClass={'movie-card-container-inner'} title={atomicData.name} desc={innerDesc}/>
+      return <Card key={index} index={index} height={'200px'} width={'300px'} extraClass={'movie-card-container-inner'} styleForHeader={{'color': '#3f6f97'}} title={atomicData.name} desc={innerDesc} disableClick={true}/>
     });
   }
 }

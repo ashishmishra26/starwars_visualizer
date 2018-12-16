@@ -11,7 +11,6 @@
     color: #be8484;
     height: 50px;
     font-weight: bolder;
-    cursor: pointer;
 }
 .card-text {
     color: #b1aaaa;
@@ -27,4 +26,7 @@
 }
 .ml--10 {
     margin-left: -10%;
+}
+.cursor {
+    cursor: pointer;
 }
