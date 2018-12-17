@@ -11,7 +11,7 @@ export default class Content extends Component {
     }
   }
   render() {
-    let {films} = this.props;  
+    let {films} = this.props;
     return (
       <div className="content col-12 row no-gutters">
         <Description films={films} showList={this.state.showList} movieToShow={this.state.movieToShow}/>
