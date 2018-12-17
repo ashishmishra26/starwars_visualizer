@@ -6,8 +6,8 @@ export default class Description extends Component {
     let {films, showList, movieToShow} = this.props;
     return (
       <div className="description col-3">
-        <p style={{'fontSize': '30px'}}className="description-text">Star Wars Visualizer</p>
-        <div className="description-text">{showList ? defaultText() : films.results[movieToShow]['opening_crawl']}</div>
+        <p className="description-header">Star Wars Visualizer</p>
+        <div id="text-content" className="description-text">{showList ? defaultText() : films.results[movieToShow]['opening_crawl']}</div>
       </div>
     )
   }
