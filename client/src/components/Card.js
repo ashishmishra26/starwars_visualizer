@@ -9,9 +9,9 @@ export default class Card extends Component {
         width: width
     }
     return (
-      <div style={cardDimention} className={`${!width && 'col-1'} ${!height && 'default-card-height'} ${extraClass}`} >
-      <div style={styleForHeader} className={`card-header ${!disableClick && 'cursor'}`} onClick={ () => {!disableClick && this.handleCardClick({index})} }>{title}</div>
-      <div style={styleForContent} className="card-text">{desc}</div>
+      <div style={cardDimention} className={`${!width && 'col-6'} ${!height && 'default-card-height'} ${extraClass} ${!disableClick && 'cursor'}`} onClick={ () => {!disableClick && this.handleCardClick({index})}}>
+      <div style={styleForHeader} className={`card-header`}>{title}</div>
+      <div style={styleForContent} className={`card-text`}>{desc}</div>
       </div>
     )
   }
