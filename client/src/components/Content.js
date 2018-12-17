@@ -13,17 +13,15 @@ class Content extends Component {
     }
   }
   render() {
-    console.log(this.props);
-    let {films} = this.props;
+    let {films, showList, movieIndex} = this.props;
     return (
       <div className="content col-12 row no-gutters">
-        <Description films={films} showList={this.props.showList} movieIndex={this.props.movieIndex}/>
-        <RightContent films={films} showList={this.props.showList} movieIndex={this.props.movieIndex} cardClickHandler={this.cardClickHandler} backClickHandler={this.backClickHandler}/>
+        <Description films={films} showList={showList} movieIndex={movieIndex}/>
+        <RightContent films={films} showList={showList} movieIndex={movieIndex} cardClickHandler={this.cardClickHandler} backClickHandler={this.backClickHandler}/>
       </div>
     )
   }
   cardClickHandler = (index) => {
-    console.log(index);
     this.props.toggleListVisibility(0, index.index);
   }
   backClickHandler = (visibility) => {

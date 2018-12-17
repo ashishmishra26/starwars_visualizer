@@ -10,7 +10,6 @@ const rootReducer = (state = initState, action) => {
             films: action.films
         }
     } else if (action.type === 'TOGGLE_VISIBILITY') {
-        console.log(action);
         return {
             ...state,
             showList: action.showList,

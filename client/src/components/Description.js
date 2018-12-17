@@ -3,7 +3,6 @@ import './description.css'
 import defaultText from '../utils/defaultDescription'
 export default class Description extends Component {
   render() {
-    console.log('desc prop', this.props);
     let {films, showList, movieIndex} = this.props;
     return (
       <div className="description col-3">
