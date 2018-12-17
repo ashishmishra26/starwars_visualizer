@@ -1,7 +1,7 @@
 const initState = {
     films: {},
     showList: 1,
-    movieIndex: 0
+    movieIndex: undefined
 }
 const rootReducer = (state = initState, action) => {
     if (action.type === 'ADD_FILMS') {
