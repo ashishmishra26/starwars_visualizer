@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
-import { connect } from 'react-redux';
-import { addFilms } from './actions/filmsAction'
 import Content from './components/Content';
+// import dependencies
+import { connect } from 'react-redux';
+// import actions
+import { addFilms } from './actions/filmsAction'
 
 class App extends Component {
   render() {
@@ -16,7 +18,7 @@ class App extends Component {
   }
   
   componentDidMount () {
-    this.props.addFilms();
+    this.props.addFilms(); // fetching data on componentDidMount
   }
 }
 
