@@ -15,8 +15,9 @@
 .card-text {
     color: #b1aaaa;
     overflow-y: scroll;
-    padding: 5px;
+    padding: 15px;
     height: calc(100% - 50px);
+    white-space: pre-wrap;
 }
 .default-card-height{ 
     height: 200px;

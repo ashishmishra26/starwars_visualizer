@@ -7,7 +7,7 @@ export default class RightContent extends Component {
     let {films, showList, movieToShow} = this.props;
     return (
       <div className="right-content col-9 no-gutters">
-      { (showList) ? (films.results && films.results.map((film, index) => {return <Card key={index} index={index} title={film.title} desc={film['opening_crawl']} extraClass={'card-container col-6 ml-25'} cardClickHandler={this.props.cardClickHandler}/>})): ''}
+      { (showList) ? (films.results && films.results.map((film, index) => {return <Card key={index} index={index} title={film.title} desc={`Release Date - ${film['release_date']}\n Director - ${film['director']}\n Producer - ${film['producer']}`} extraClass={'card-container col-6 ml-25'} cardClickHandler={this.props.cardClickHandler}/>})): ''}
       { !showList && <button className="back-button" onClick={()=>{this.props.backClickHandler(1)}}>Back to list</button> }
       { !showList && <MovieDetail movieData={films.results[movieToShow]}/>}
       </div>
