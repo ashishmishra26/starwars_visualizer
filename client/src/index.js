@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import '../src/nprogress.css';
 import App from './containers/AppContainer';
 import * as serviceWorker from './serviceWorker';
 // importing dependencies
