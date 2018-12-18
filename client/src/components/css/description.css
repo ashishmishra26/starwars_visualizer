@@ -2,7 +2,7 @@
     background-color: #24292e;
     height: 100vh;
     overflow-y: scroll;
-    text-align: left;
+    text-align: justify;
 }
 
 .description-header {
@@ -10,10 +10,12 @@
     color: #358583; 
     font-weight: bolder; 
     padding: 0px 20px;
+    text-align: center;
+    margin-top: 20px;
 }
 .description-text {
     color: #CAC7E9;
-    padding: 0px 20px;
+    padding: 0px 25px;
 }
 #text-content {
     height: 50%;
