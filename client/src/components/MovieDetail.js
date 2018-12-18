@@ -18,7 +18,7 @@ export default class MovieDetail extends Component {
         {
           (arrProperties.map((prop, index) => {
           var content = this.generateContent(movieData[prop]); // content for inner card is done in a function
-          return <Card key={index} index={index} title={prop} content={content} height={'360px'} styleForContent={{'overflowY': 'hidden'}} extraClass={'movie-card-container col-12 ml--10'} disableClick={true}></Card>
+          return <Card key={index} index={index} title={prop.toUpperCase()} content={content} height={'360px'} styleForContent={{'overflowY': 'hidden'}} extraClass={'movie-card-container col-12 ml--10'} disableClick={true}></Card>
           }))
         }
       </div>
