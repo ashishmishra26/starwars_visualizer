@@ -7,7 +7,7 @@
 
 .description-header {
     font-size: 2vw;
-    color: #358583; 
+    color: #358583;
     font-weight: bolder; 
     padding: 0px 20px;
     text-align: center;
@@ -16,6 +16,7 @@
 .description-text {
     color: #CAC7E9;
     padding: 0px 25px;
+    font-size: 1.2vw;
 }
 #text-content {
     height: 50%;

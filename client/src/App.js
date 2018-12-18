@@ -8,7 +8,7 @@ class App extends Component {
       <div className="App container-fluid">
         <div className="row">
             <Content films={this.props.films}/>
-        </div>  
+        </div>
       </div>
     );
   }
