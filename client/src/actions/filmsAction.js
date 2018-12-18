@@ -1,4 +1,7 @@
+
+import { ProgresBar } from '../utils/progressBar';
 export const addFilms = () => {
+    ProgresBar.start(0.4);
     let filmsData = {};
     return function (dispatch) {
         return fetch('https://www.swapi.co/api/films')
@@ -25,6 +28,7 @@ export const addFilms = () => {
                 type: 'ADD_FILMS',
                 films: filmsData,
             });
+            ProgresBar.stop();
         })
         .catch(error => {
             console.log('Error fetching data', error);
