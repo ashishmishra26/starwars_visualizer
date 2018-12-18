@@ -17,8 +17,9 @@ class App extends Component {
     );
   }
   
+  // fetching data on componentDidMount lifecycle method
   componentDidMount () {
-    this.props.addFilms(); // fetching data on componentDidMount
+    this.props.addFilms();
   }
 }
 
