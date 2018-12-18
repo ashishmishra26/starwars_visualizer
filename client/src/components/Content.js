@@ -5,13 +5,6 @@ import RightContent from './RightContent'
 import { connect } from 'react-redux'
 import { toggleListVisibility } from '../actions/listAction.js'
 class Content extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-        showList: 1,
-        movieToShow: undefined
-    }
-  }
   render() {
     let {films, showList, movieIndex} = this.props;
     return (

@@ -13,30 +13,35 @@ export default class MovieDetail extends Component {
     return (
       <div className="movie-detail col-10 ml-auto">
         {(arrProperties.map((prop, index) => {
-        var desc = this.generateContent(movieData[prop]);
-        return <Card key={index} index={index} height={'360px'} desc={desc} styleForContent={{'overflowY': 'hidden'}} extraClass={'movie-card-container col-12 ml--10'} title={prop} disableClick={true}>
+        var content = this.generateContent(movieData[prop]);
+        return <Card key={index} index={index} height={'360px'} content={content} styleForContent={{'overflowY': 'hidden'}} extraClass={'movie-card-container col-12 ml--10'} title={prop} disableClick={true}>
         </Card>}))}
       </div>
     )
   }
   generateContent (data) {
+    let nonAllowedKeys = ['homeworld', 'created', 'edited', 'url'];
+
     return data.map((value, index) => {
       let atomicData = data[index], 
-      desc = {},
+      content = {},
       table = [],
-      innerDesc;
+      innerContent;
       for (let key in atomicData) {
-        if (!(atomicData[key] instanceof Array) && (['homeworld', 'created', 'edited', 'url'].indexOf(key) === -1)) {
-          desc[key] = atomicData[key];
+        if (!(atomicData[key] instanceof Array) && (nonAllowedKeys.indexOf(key) === -1)) {
+          content[key] = atomicData[key];
         }
       }
-      for (let key in desc) {
+      for (let key in content) {
         table.push(
-        <tr key={key}><td className="key_table" key={key}>{key}</td><td>{desc[key]}</td></tr>
+          <tr key={key}>
+            <td className="key-table">{key}</td>
+            <td>{content[key]}</td>
+          </tr>
         )
       }
-      innerDesc = <table className="data-table"><tbody>{table}</tbody></table>;
-      return <Card key={index} index={index} height={'250px'} width={'300px'} extraClass={'movie-card-container-inner'} extraClassForContent={'inner-content-text'} styleForHeader={{'color': '#3f6f97'}} title={atomicData.name} desc={innerDesc} disableClick={true}/>
+      innerContent = <table className="data-table"><tbody>{table}</tbody></table>;
+      return <Card key={index} index={index} height={'250px'} width={'300px'} extraClass={'movie-card-container-inner'} extraClassForContent={'inner-content-text'} styleForHeader={{'color': '#3f6f97'}} title={atomicData.name} content={innerContent} disableClick={true}/>
     });
   }
 }
