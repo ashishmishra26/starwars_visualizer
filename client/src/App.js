@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import Content from './components/Content';
-// import dependencies
-import { connect } from 'react-redux';
-// import actions
-import { addFilms } from './actions/filmsAction'
+import Content from './containers/ContentContainer';
 
 class App extends Component {
   render() {
@@ -23,16 +19,5 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  return {
-    films: state.films
-  }
-}
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    addFilms: () => dispatch(addFilms())
-  }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default App;
