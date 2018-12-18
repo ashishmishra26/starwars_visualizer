@@ -24,7 +24,7 @@ export default class Card extends Component {
     this.props.cardClickHandler(index);
   }
   mouseOverHandler = (e) => {
-    e.target.parentElement.style.transform = 'scale(1.1)';
+    e.target.parentElement.style.transform = 'scale(1.05)';
   }
   mouseOutHandler = (e) => {
     e.target.parentElement.style.transform = 'scale(1)';
