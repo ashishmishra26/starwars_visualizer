@@ -10,7 +10,7 @@ export default class Card extends Component {
     };
     // card component has two parts header and content
     return (
-      <div style={cardDimention} className={`${!width && 'col-6'} ${!height && 'default-card-height'} ${extraClass} ${!disableClick && 'cursor'}`} onClick={() => {!disableClick && this.clickHandler({index})}} onMouseOver={(e) => {enableHover && this.mouseOverHandler(e)}} onMouseOut={(e) => {enableHover && this.mouseOutHandler(e)}}>
+      <div style={cardDimention} className={`${!width && 'default-card-width'} ${!height && 'default-card-height'} ${extraClass} ${!disableClick && 'cursor'}`} onClick={() => {!disableClick && this.clickHandler({index})}} onMouseOver={(e) => {enableHover && this.mouseOverHandler(e)}} onMouseOut={(e) => {enableHover && this.mouseOutHandler(e)}}>
         <div style={styleForHeader} className={`card-header ${extraClassForHeader}`}>{title}</div>
         <div style={styleForContent} className={`card-text ${extraClassForContent}`}>{content}</div>
       </div>
