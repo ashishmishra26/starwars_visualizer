@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Card from './Card';
-import './moviedetail.css'
+import './css/moviedetail.css'
 
 export default class MovieDetail extends Component {
   render() {

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './rightcontent.css'
+import './css/rightcontent.css'
 import Card from './Card';
 import MovieDetail from './MovieDetail'
 export default class RightContent extends Component {

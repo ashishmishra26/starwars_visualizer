@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './description.css'
+import './css/description.css'
 import defaultText from '../utils/defaultDescription'
 export default class Description extends Component {
   render() {

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './content.css'
+import './css/content.css'
 import Description from './Description'
 import RightContent from './RightContent'
 class Content extends Component {
