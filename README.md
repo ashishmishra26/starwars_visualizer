@@ -7,6 +7,8 @@ In movie detail section different element of a movie is shown like characters, p
 
 This app is developed using **React.js** and **Redux**.
 
+Hosted at - https://admiring-minsky-1fac3f.netlify.com/
+
 # How To use
 
 ## Available Scripts
